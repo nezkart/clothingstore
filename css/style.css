@@ -1,36 +1,137 @@
 html, body {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 200%;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .navbar, .navbar-main {
     background-color: #313131;
 }
 
-.navbar ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.navbar li {
-    display: inline;
-}
-
 .navbar-main {
+    overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
+    padding: 0 15%;
+    z-index: 1;
 }
 
-.navbar-main ul {
-    padding: 0 200px;
-    height: 30px;
+.navbar-main a {
+    text-align: center;
+    text-decoration: none;
+    padding: 0 10px;
+    height: 35px;
+    color: #d3d2d1;
+    font-size: 0.7rem;
+
+    /* align anchors vertically 
+    display: flex;
+    flex-direction: row;
+    align-items: center; */
 }
 
-.navbar-main-right {
+.navbar a {
+    /*display: block;*/
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
     float: right;
 }
 
-.cart-li {
+.cart-a {
     background-color: #419690;
+}
+
+.navbar-selection-main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    color: #313131;
+    width: 100%;
+    /*display: flex;
+    align-items: center; */
+    height: 100px;
+    padding: 0 5%;
+}
+
+.navbar-selection-main a {
+    color: #313131;
+    padding: 30px 20px;
+    font-size: 0.75rem;
+}
+
+.navbar-selection-main .navbar-right {
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    top: 35px;
+}
+
+.home-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem !important;
+}
+
+.home-logo span {
+    font-weight: 700;
+}
+
+.navbar {
+    /*float: left;*/
+}
+
+.top-content {
+    background-color: #f8f8f8;
+}
+
+.middle-content {
+    margin: 0 5%;
+}
+
+hr {
+    border: none;
+    background-color: #eeeeee;
+    height: 1px;
+    width: 96%;
+}
+
+.navbar-selection-middle a {
+    color: #313131;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem !important;
+    padding: 30px;
+}
+
+.navbar-selection-middle {
+    background-color: transparent;
+    display: flex;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0;
+    justify-items: center;
+}
+
+.gallery .item3 {
+    grid-column: 2 / -1;
 }
