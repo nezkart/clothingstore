@@ -96,7 +96,7 @@ html, body {
     top: -5px;
 }
 
-.home-logo span {
+.home-logo span, .mobile-nav span {
     font-weight: 700;
 }
 
@@ -285,6 +285,33 @@ hr {
     background-color: #313131;
     height: 65px;
     display: none;
+  }
+
+  .mobile-nav #mobile-logo {
+      font-size: 1.20rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      color: white;
+      /*left: 50%;
+      transform: translateX(-90%) translateX(-290px);*/
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      position: absolute;
+      padding: 5px;
+      z-index: 1;
+  }
+
+  .mobile-nav .mobile-cart-a {
+      color: white;
+      position: absolute;
+      right: 0;
+      margin-right: 25px;
+      font-size: 1.8rem;
+      top: 50%;
+      transform: translateY(-50%) translateY(2px);
+      z-index: 1;
   }
 
   #menuToggle {
