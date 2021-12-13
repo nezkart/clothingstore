@@ -13,13 +13,45 @@
         rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/ccad127c8d.js" crossorigin="anonymous"></script>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
+    <nav class="mobile-nav" role="navigation">
+        <div id="menuToggle">
+          <input class="checkbox-burger" type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        <ul id="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Info</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+       </div>
+      </nav>
     <!-- hidden -->
+    <!-- ugh 
+    <div class="mobile-topnav">
+        <a class="burger-icon" href="#" onclick="toggleBurger()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </a>
+        
+        <div class="mobile-menu-list">
+            <a href="#">Currency : #</a></li>
+            <a href="#">One</a>>
+            <a href="#">Two</a>>
+            <a href="#">Three</a>>
+            <a class="login" href="#">Login</a>
+            <a class="signup" href="#">Sign Up</a>
+        </div>
+    </div>
     <div class="burger-menu" onclick="toggleMobileMenu(this)">
-        <a href="#">
+        <a class="burger-icon" href="#">
             <div></div>
             <div></div>
             <div></div>
@@ -30,7 +62,6 @@
             <li><a href="#" class="cart-a"><i class="far fa-laugh-wink"></i>empty (cart)</a></li>
         </ul>
         
-        <!-- hidden -->
         <ul class="mobile-menu">
             <li><a href="#">Currency : #</a></li>
             <li><a href="#">One</a></li>
@@ -40,6 +71,7 @@
             <li class="signup"><a href="#">Sign Up</a></li>
         </ul>
     </div>
+-->
     <!-- Top navbar with cart, logins, etc... -->
     <div class="navbar navbar-main">
         <a href="#">Currency : #</a>
