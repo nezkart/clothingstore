@@ -19,7 +19,7 @@ html, body {
 .navbar-main {
     overflow: hidden;
     position: fixed;
-    top: 0;
+    top: 0px;
     width: 100%;
     padding: 0 15%;
     z-index: 1;
@@ -51,12 +51,13 @@ html, body {
 }
 
 .cart-a {
-    background-color: #419690;
+    background-color: #00c8c8;
+    color: white !important;
 }
 
 .navbar-selection-main {
     position: absolute;
-    top: 40px;
+    top: 0;
     right: 0;
     background-color: transparent;
     color: #313131;
@@ -84,7 +85,7 @@ html, body {
 
 .container {
     position: relative;
-    /*top: 35px; */
+    top: 35px;
 }
 
 .home-logo {
@@ -106,6 +107,7 @@ html, body {
 .top-content {
     background-color: #f8f8f8;
     top: 0;
+    position: relative;
 }
 
 .middle-content {
@@ -133,7 +135,24 @@ hr {
 }
 
 .main-img {
-    max-width: 100%;
+    max-width: 50%;
+    position: relative;
+    left: 100px;
+}
+
+#large-ave {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #36383F;
+    /*font-size: 12rem; */
+    font-size: 20vw;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 75px;
+    margin: 0;
+    padding: 0;
+    user-select: none;
 }
 
 /* Gallery Design */
@@ -249,7 +268,6 @@ hr {
     text-decoration: none;
     color: #1E1E23;
     opacity:1;
-    font-family: 'work sans', sans serif;
     font-size: 1.5em;
     font-weight: 400;
     transition: 200ms;
@@ -264,7 +282,7 @@ hr {
   }
   
   .mobile-nav {
-    background-color: #1E1E23;
+    background-color: #313131;
     height: 65px;
     display: none;
   }
@@ -340,13 +358,13 @@ hr {
   #menu
   {
     position: absolute;
-    width: 95%;
+    width: 100%;
     height: calc(100vh + 25px);
     /*margin: -50px 0 0 -50px;*/
     margin: -50px 0 0 0;
     padding: 50px;
     padding-top: 125px;
-    background-color: #F5F6FA;
+    background-color: #f8f8f8;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
@@ -386,5 +404,15 @@ hr {
         position: fixed;
         width: 100%;
         z-index: 1;
+    }
+
+    /* make .container below mobile navbar */
+    .container {
+        top: 65px;
+    }
+
+    .main-img {
+        max-width: 100%;
+        left: 0;
     }
 }
