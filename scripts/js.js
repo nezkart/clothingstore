@@ -1,2 +1,3 @@
-alert("Warning: TF2 Heavy Sanwich iEating")
-window.print()
+function toggleMobileMenu(menu) {
+    menu.classList.toggle('open')
+}

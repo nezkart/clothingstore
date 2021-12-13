@@ -6,16 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/ccad127c8d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Lato:wght@300;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Roboto&display=swap"
         rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/ccad127c8d.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
+    <!-- hidden -->
+    <div class="burger-menu" onclick="toggleMobileMenu(this)">
+        <a href="#">
+            <div></div>
+            <div></div>
+            <div></div>
+        </a>
+        <ul class="mobile-nav-top">
+            <li><a href="#"><i class="fa-duotone fa-right-to-bracket"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i></a></li>
+            <li><a href="#" class="cart-a"><i class="far fa-laugh-wink"></i>empty (cart)</a></li>
+        </ul>
+        
+        <!-- hidden -->
+        <ul class="mobile-menu">
+            <li><a href="#">Currency : #</a></li>
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+            <li class="login"><a href="#">Login</a></li>
+            <li class="signup"><a href="#">Sign Up</a></li>
+        </ul>
+    </div>
+    <!-- Top navbar with cart, logins, etc... -->
     <div class="navbar navbar-main">
         <a href="#">Currency : #</a>
         <div class="navbar-right">
