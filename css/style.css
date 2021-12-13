@@ -136,7 +136,7 @@ hr {
 /* Gallery Design */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(100%, auto));
     grid-gap: 0;
     justify-items: center;
 }
@@ -154,6 +154,7 @@ hr {
     cursor: pointer;
     display: none;
     margin: auto 0;
+    background-color: red;
 }
 
 .burger-menu div {
@@ -165,7 +166,6 @@ hr {
 
 .burger-menu a:first-child {
     color: #313131;
-    background-color: red;
 }
 
 .burger-menu ul {
@@ -176,6 +176,10 @@ hr {
     justify-content: space-around;
 }
 
+.burger-menu li {
+    color: #313131;
+}
+
 .burger-menu a {
     color: #313131; 
 }
@@ -183,10 +187,14 @@ hr {
 .mobile-menu {
     display: none;
     position: absolute;
+    /*
     top: 50px;
     left: 0;
     height: calc(100vh - 50px);
     width: 100%;
+    padding: 0;
+    margin: 0;
+    */
 }
 
 .open .mobile-menu {
@@ -203,6 +211,8 @@ hr {
 }
 
 .mobile-nav-top {
+    margin: 0;
+    padding: 0;
     display: flex;
 }
 
