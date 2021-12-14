@@ -263,7 +263,7 @@ hr {
     color: grey;
 }
 
-/* ka nx */
+/* WORKING MOBILE DESIGN */
 .mobile-nav  a {
     text-decoration: none;
     color: #1E1E23;
@@ -287,6 +287,7 @@ hr {
     display: none;
   }
 
+  /* Mobile home logo button in navbar */
   .mobile-nav #mobile-logo {
       font-size: 1.20rem;
       font-family: 'Montserrat', sans-serif;
@@ -303,6 +304,7 @@ hr {
       z-index: 1;
   }
 
+  /* Mobile view cart button on navbar */
   .mobile-nav .mobile-cart-a {
       color: white;
       position: absolute;
@@ -313,6 +315,7 @@ hr {
       transform: translateY(-50%) translateY(2px);
       z-index: 1;
   }
+
 
   #menuToggle {
     display: flex;
@@ -338,6 +341,7 @@ hr {
     top: -10px;
   }
   
+  /* Burger buns and patty */
   #menuToggle span
   {
     display: flex;
@@ -365,6 +369,7 @@ hr {
     transform-origin: 0% 100%;
   }
   
+  /* Make burger explode (clicked burger) */
   #menuToggle input:checked ~ span
   {
     opacity: 1;
@@ -382,6 +387,7 @@ hr {
     transform: rotate(-45deg) translate(0, -1px);
   }
   
+  /* Mobile navbar menu; hidden in the left */
   #menu
   {
     position: absolute;
@@ -409,6 +415,7 @@ hr {
     transform: none;
   }
 
+  /* END OF MOBILE DESIGN */
 @media all and (max-width: 800px) {
     .navbar {
         display: none;
