@@ -22,7 +22,7 @@ html, body {
     top: 0px;
     width: 100%;
     padding: 0 15%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .navbar-main a {
@@ -68,10 +68,22 @@ html, body {
     padding: 0 5%;
 }
 
+/* tags: arrow down thing*/
+.navbar-selection-main .navbar-right {
+    display: flex;
+}
+
 .navbar-selection-main a {
     color: #313131;
     padding: 30px 20px;
     font-size: 0.75rem;
+    display: inline-block;
+    /*vertical-align: top; */
+}
+
+.navbar-selection-main a svg {
+    display: block;
+    margin-top: 5px;
 }
 
 .navbar-selection-main .navbar-right {
@@ -416,6 +428,50 @@ hr {
   }
 
   /* END OF MOBILE DESIGN */
+
+  /* HOVER DROPDOWN MENU ON TOP NAVBAR ON DESKTOP VIEW */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* flex on hover */
+    position: absolute;
+    background-color: #f8f8f8;
+    /* min-width: 100px; */
+    top: 70px;
+    left: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    padding: 20px;
+    gap: 50px;
+}
+
+.dropdown-content a {
+    color: #727272;
+    font-family: 'Montserrat', sans-serif;
+    padding: 8px 16px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a.menu-link-title {
+    font-family: 'Lato', sans-serif;
+    color: #36383F;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.dropdown-content a:not(.menu-link-title):hover {
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
 @media all and (max-width: 800px) {
     .navbar {
         display: none;
