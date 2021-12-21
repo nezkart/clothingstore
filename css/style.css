@@ -150,9 +150,9 @@ hr {
 }
 
 .main-img {
-    max-width: 50%;
+    max-width: 40%;
     position: relative;
-    left: 100px;
+    left: 10em;
 }
 
 #large-ave {
@@ -173,9 +173,26 @@ hr {
 /* Gallery Design */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100%, auto));
+    grid-template-columns: repeat(auto-fill, minmax(25%, auto));
     grid-gap: 0;
     justify-items: center;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.gallery a {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 0px;
+    text-decoration: none;
+    color: #1E1E23;
+    border: 1px solid #0000000f;
+    width: 20vw;
+    height: 20vw;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
 }
 
 .gallery .item3 {
@@ -184,6 +201,10 @@ hr {
 
 .gallery img {
     /*max-width: 300px;*/
+    width: auto;
+    height: 100%;
+    top: 0;
+    position: absolute;
 }
 
 /* Mobile Design */
@@ -514,7 +535,7 @@ hr {
 
 /* END */
 
-/* Gallery style */
+/* Gallery style 
 .gallery {
     width: 100%;
     display: flex;
@@ -522,9 +543,82 @@ hr {
     flex-wrap: wrap;
 }
 
-.gallery img {
+.gallery .small img {
+    /*height: 100%;
+    width: 100%;
+    object-fit: cover; */ /*
+    width: 100%;
+}
+
+.gallery .big img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;/*
     width: 300px;
-    height: 350px;
+}*/
+/*
+.gallery img {
+}
+
+.gallery a {
+    height: 100%;
+}
+
+.gallery span {
+}
+
+.gallery a {
+    text-decoration: none;
+    color: #727272;
+}
+
+.gallery a {
+    background-color: #f8f8f8;
+}
+
+.gallery .gallery1, .gallery .gallery2 {
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); 
+    align-items: stretch;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.gallery .gallery2 {
+    grid-template-areas: "img1 img1"
+                        "img2 img3";
+}
+
+.gallery .gallery2 a img {
+}
+
+.gallery .gallery1 .item1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.gallery .gallery1 .item2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.gallery .gallery1 .item3 {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.gallery .gallery2 .item1 {
+    grid-area: img1;
+}
+
+.gallery .gallery2 .item2 {
+    grid-area: img2;
+}
+
+.gallery .gallery2 .item3 {
+    grid-area: img3;
+}
+
+.gallery .gallery1 {
 }
 
 .gallery .gallery1 .item1, .gallery .gallery1 .item2 {
@@ -537,7 +631,6 @@ hr {
 }
 
 .gallery .gallery2 {
-    width: 50%;
 }
 .gallery .gallery1 {
 /*    display: grid;
@@ -546,30 +639,56 @@ hr {
     grid-template-areas: "img1 img2"
                         "img3 img3";
     grid-column-gap: 0px;
-    grid-row-gap: 0px;*/
-    width: 50%;
+    grid-row-gap: 0px;*//*
 }
 
 .gallery .gallery1 .item1 {
 /*    grid-area: 1 / 1 / 2 / 2;*/
 /*    grid-area: img1;*/
-}
+/*}
 
 .gallery .gallery1 .item2 {
 /*    grid-area: 1 / 2 / 2 / 3;*/
 /*    grid-area: img2;*/
-}
+/*}
 
 .gallery .gallery1 .item3 {
 /*    grid-area: 2 / 1 / 3 / 3;*/
 /*    grid-area: img3;*/
-}
+/*}
 
 .gallery .gallery1 .item3 img {
 /*    grid-area: 2 / 1 / 3 / 3;*/
-}
+/*}
 
 /* END */
+
+/* Gallery */
+/*.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery a img {
+    max-height: 250px;
+}
+
+.gallery a {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    border: 1px solid #36383F0f;
+    overflow: hidden;
+}
+
+.gallery span {
+    left: 5px;
+    top: 5px;
+    position: absolute;
+    text-decoration: none;
+    color: #1E1E23;
+}*/
 
 /* Bottom content */
 .bottom-content .bottom-content-options {
@@ -584,6 +703,7 @@ hr {
     padding-right: 30px;
     height: 300px;
     width: 32%;
+    overflow: hidden;
 }
 
 .bottom-content .bottom-content-options .item h2 {
@@ -599,7 +719,7 @@ hr {
 .bottom-content .bottom-content-options .item img {
     width: 140px;
     float: left;
-    position: absolute;
+    /*position: absolute;*/
     bottom: 0;
 }
 
@@ -762,9 +882,9 @@ hr {
         /* display: block; */
     }
 
-    .gallery {
+    /*.gallery {
         grid-template-columns: 1fr;
-    }
+    }*/
 
     .gallery img {
         max-width: 100%;
