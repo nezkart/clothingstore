@@ -1,4 +1,49 @@
 <!DOCTYPE html>
+<?php
+        use PHPMailer\PHPMailer\PHPMailer;
+        use PHPMailer\PHPMailer\Exception;
+        require 'PHPMailer/src/Exception.php';
+        require 'PHPMailer/src/PHPMailer.php';
+        require 'PHPMailer/src/SMTP.php';
+
+    if (isset($_POST['send'])) {
+    
+        $email = '';
+        $password = '';
+        $host = '';
+            
+        $mail = new PHPMailer;
+    
+        $mail->isSMTP(); // use smtp
+        $mail->Host = $host;
+        $mail->SMTPAuth = true;
+        $mail->Username = $email;
+        $mail->Password = $password;
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+    
+        $mail->setFrom($password, 'Sender');
+        $mail->addReplyTo($_POST['emailreply'], 'Reply');
+    
+        // recipient
+        $mail->addAddress($email);
+    
+        $mail->isHTML(true);
+    
+        $mail->Subject = $_POST['subject'];
+    
+        $mail->Body = $_POST['msg'];
+    
+
+        $mail->send();
+        /*if (!$mail->send()) {
+            echo 'Error'.$mail->ErrorInfo;
+        } else {
+            echo 'Sent.';
+        } */
+    }
+
+?>
 <html lang="en">
 
 <head>
@@ -45,45 +90,7 @@
                 </path>
             </svg></a>
     </nav>
-    <!-- ugh 
-    <div class="mobile-topnav">
-        <a class="burger-icon" href="#" onclick="toggleBurger()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </a>
-        
-        <div class="mobile-menu-list">
-            <a href="#">Currency : #</a></li>
-            <a href="#">One</a>>
-            <a href="#">Two</a>>
-            <a href="#">Three</a>>
-            <a class="login" href="#">Login</a>
-            <a class="signup" href="#">Sign Up</a>
-        </div>
-    </div>
-    <div class="burger-menu" onclick="toggleMobileMenu(this)">
-        <a class="burger-icon" href="#">
-            <div></div>
-            <div></div>
-            <div></div>
-        </a>
-        <ul class="mobile-nav-top">
-            <li><i class="far fa-laugh-wink"></i></li>
-            <li><i class="far fa-laugh-wink"></i></a></li>
-            <li><a href="#" class="cart-a"><i class="far fa-laugh-wink"></i>empty (cart)</a></li>
-        </ul>
-        
-        <ul class="mobile-menu">
-            <li><a href="#">Currency : #</a></li>
-            <li><a href="#">One</a></li>
-            <li><a href="#">Two</a></li>
-            <li><a href="#">Three</a></li>
-            <li class="login"><a href="#">Login</a></li>
-            <li class="signup"><a href="#">Sign Up</a></li>
-        </ul>
-    </div>
--->
+    
     <!-- Desktop top navbar with cart, logins, etc... -->
     <div class="navbar navbar-main">
         <a href="#">Currency : #</a>
@@ -273,6 +280,17 @@
                 </div>
             </div>
         </div>
+        <form action="" class="contact" method="post">
+            <h2>Contact Us</h2>
+            <div class="fields">
+                <label for="email">
+                    <input type="text" name="emailreply" placeholder="Your Email" required>
+                </label>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="msg" placeholder="Message" required></textarea>
+            </div>
+            <input type="submit" name="send">
+        </form>
         <div class="bottom-details">
             <div class="list1">
                 <h6>WHY BUY FROM US</h6>
@@ -331,6 +349,7 @@
     <script src="scripts/masonry.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
     <script src="scripts/js.js" type="text/javascript"></script>
+
 </body>
 
 </html>
