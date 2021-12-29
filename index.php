@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <?php
+
+$host = "localhost";
+$userName = "root";
+$password = "";
+$dbName = "clothingstore";
+// connect to mysql
+$conn = new mysqli($host, $userName, $password, $dbName);
+// check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if (isset($_POST['send'])) {
+    //require_once("contact_mail.php");
+
+    $yourEmail = $conn->real_escape_string($_POST['emailreply']);
+    $subject = $conn->real_escape_string($_POST['subject']);
+    $comments = $conn->real_escape_string($_POST['msg']);
+    $sql = "INSERT INTO contact_form_info (email, subject, message) VALUES ('$yourEmail','$subject', '$comments')";
+    if (!$result = $conn->query($sql)) {
+        die('There was an error running the query [' . $conn->error . ']');
+    }
+}
+
+/* PHPMailer contact form which sends email directly
         use PHPMailer\PHPMailer\PHPMailer;
         use PHPMailer\PHPMailer\Exception;
         require 'PHPMailer/src/Exception.php';
@@ -41,7 +66,7 @@
         } else {
             echo 'Sent.';
         } */
-    }
+//    }
 
 ?>
 <html lang="en">
@@ -82,7 +107,7 @@
                 <li><a href="#">ABOUT US</a></li>
             </ul>
         </div>
-        <a href="https://www.google.com" id="mobile-logo"><span>AVENUE</span> FASHION</a>
+        <a href="index.php" id="mobile-logo"><span>AVENUE</span> FASHION</a>
         <a href="#" class="mobile-cart-a"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
                 viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -108,7 +133,7 @@
             <img class="main-img" src="images/person.png" alt="Large photo of male in white t-shirt">
             <div id="large-ave">A&nbsp;&nbsp;V&nbsp;&nbsp;E</div>
             <div class="navbar navbar-selection-main">
-                <a class="home-logo" href="#"><span>AVENUE</span>&nbsp;FASHION</a>
+                <a class="home-logo" href="index.php"><span>AVENUE</span>&nbsp;FASHION</a>
                 <div class="navbar-right">
                     <div class="dropdown">
                         <a href="#">MENS<svg stroke="currentColor" fill="currentColor" stroke-width="0"
@@ -280,7 +305,8 @@
                 </div>
             </div>
         </div>
-        <form action="" class="contact" method="post">
+        <!-- contact form -->
+        <form action="index.php" class="contact" method="post">
             <h2>Contact Us</h2>
             <div class="fields">
                 <label for="email">
